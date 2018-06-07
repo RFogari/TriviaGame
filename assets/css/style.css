@@ -1,0 +1,19 @@
+body{
+    background-image: url(../assets/images/background.jpeg);
+};
+
+.header{
+    
+}
+
+.gameTitle{
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.header{
+    background-color: grey;
+    text-align: center;
+    color:white;
+}
