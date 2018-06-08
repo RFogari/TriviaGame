@@ -1,0 +1,96 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/background4.jpeg);
+}
+
+.header{
+    text-align: center;
+    width: 800px;
+    background-color: currentColor;
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 15px;
+    
+}
+
+.gameTitle{
+    font-family: 'Francois One', sans-serif;
+    font-style: bold;
+    color: white;
+    font-size: 100px;
+
+}
+
+.instructions{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 20px;
+}
+
+.start {
+    margin-left: 600px;
+    margin-top: 200px;
+    position: static;
+}
+
+.info-container{
+    background-color: #292a2b;
+    margin-left: 20%;
+    text-align: center;
+    width: 800px;
+    color: white;
+}
+
+.question{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-style: solid;
+    color:#35373a;
+    background-color:white;
+    margin-bottom:10px;
+}
+.clock{
+    background:#35373a;
+    color: white;
+    text-align: center;
+    width: 600px;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:10px;
+    height:50px;
+    font-display: bold;
+    
+}
+.time-text{
+    padding-top:10px;
+    padding-left: 10px;
+    position: absolute;
+    
+}
+.timer{
+    padding-top:10px;
+    float:relative;
+}
+
+.answer-buttons{
+    padding-top:15px;
+    padding-bottom:50px;
+}
+
+.btn{
+    padding-right:5px;
+    padding-left: 5px; 
+}
+
+.results-container{
+    background:#35373a;
+    color: white;
+}
+.results-buttons{
+    background:#35373a;
+    color: white;
+}

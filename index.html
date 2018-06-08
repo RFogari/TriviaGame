@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
 
-    
-    
-   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
-    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/cssstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>   
     
 
@@ -20,16 +16,32 @@
 <body>
     <div class="container-fluid">
         <div class="header">
-            <h1 class="gameTitle"> Trivia Game</h1>
+            <h1 class="gameTitle"> Trivia</h1>
 
-            <p class="instructions">
-                The following is a multiple choice game based on general knowledge questions.  
-                You have 10 seconds to answer each question.
-                Click start to begin.  Good Luck!
-            </p>
+            
+            <div class="instructions">
+            
+                <p>
+                    How good are you at general knowledge trivia?<br>
+                    Questions range from global trade, space travel, and odd state laws.
+
+                    <br>
+                    You have 10 seconds and only 1 guess.<br>
+                    Click the start button and find out how smart you are.<br>
+                    Good Luck!
+
+
+                </p>
+            </div>
         </div>
 
-        <div class="button-start"></div>
+
+        <div class="start">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    <div class="button-start"></div>
+                </button>
+        </div>
+        
         <div class="results"> </div>
 
     </div>
@@ -37,7 +49,9 @@
     <div class="container">
         <div class="clock">
             <div class="time-display">
-                <p>Time:</p><span><div class="timer"></div></span>
+                <p class="time-text">Time Left:<p>
+                
+                <div class="timer"></div>
 
             </div>
         </div>
@@ -49,12 +63,23 @@
 
             <div class="info-container">
                 <div class="question"></div>
+                
                     <div class="answer-buttons">
-                        <div class="button answer-1"></div>
-                        <div class="button answer-2"></div>
-                        <div class="button answer-3"></div>
-                        <div class="button answer-4"></div>
+
+                        <button type="button" class="btn btn-secondary">
+                            <div class="button answer-1"></div>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <div class="button answer-2"></div>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <div class="button answer-3"></div>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <div class="button answer-4"></div>
+                        </button>
                     </div>
+                
             </div>
 
     </div>

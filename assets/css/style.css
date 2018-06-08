@@ -1,19 +1,19 @@
 body{
-    background-image: url(../assets/images/background.jpeg);
+    background-image: url("/assets/images/background.jpeg");
+    background-color: blue;
 };
 
 .header{
+    background-color: aqua;
+    border: 10px;
+    border-color: brown;
+    text-align: center;
+    color: aliceblue;
     
-}
+};
 
 .gameTitle{
     font-family: 'Play', sans-serif;
     font-size: 20px;
     text-align: center;
-}
-
-.header{
-    background-color: grey;
-    text-align: center;
-    color:white;
-}
+};
