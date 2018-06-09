@@ -16,7 +16,30 @@ var blank = 0;
 var currentQuetion;
 
 //Game questions array
+
 var gameQuestions = [{
+       
+    question: "The first baseball game was played in what city?",
+    answers: ["Atlanta, Georgia", "Brooklyn, New York", "Chicago, Illinois", "Hoboken, New Jersey"],
+    correctAnswer: "Hoboken, New Jersey",
+
+}, 
+
+{
+
+    question: "What is the largest two digit prime number?",
+    answers: ["95", "97", "89", "93"],
+    correctAnswer: "97",
+},
+]
+
+
+
+
+
+
+
+var gameQuestionsa = [{
        
     question: "The first baseball game was played in what city?",
     answers: ["Atlanta, Georgia", "Brooklyn, New York", "Chicago, Illinois", "Hoboken, New Jersey"],
@@ -51,7 +74,7 @@ var gameQuestions = [{
 },
 
 {
-    question: "What letter and number is given to the leading Western Economic powers?",
+    question: "What was the name of the international political forum given to the leading Western Economic powers until 2014?",
     answers: ["E3", "M6", "E8", "G8"],
     correctAnswer: "G8",
 },
@@ -73,9 +96,12 @@ $(document).ready(function(){
     $('.question').hide();
     $('.answer-buttons').hide();
     $('.clock').hide();
+    $('.results').hide();
+    
+    
     $('.button-start').on("click", function (){
-    $('.instructions').hide()
-        displayQuestions();
+    $('.instructions').hide();
+            displayQuestions();
 
     });
 });
@@ -97,8 +123,9 @@ function correctAnswer (){
 
     if (questionCounter == questionsLength){
         setTimeout(endScreen, 4000);
+        
     } else {
-        setTimeout(displayQuestions, 5000);
+        setTimeout(displayQuestions, 2000);
     }
 
     console.log(questionCounter);
@@ -118,7 +145,8 @@ function wrongAnswer (){
     clearInterval(intervalId);
 
     if (questionCounter == questionsLength){
-        setTimeout(endScreen, 2000);
+           
+            setTimeout(endScreen, 4000);
     } else {
         setTimeout(displayQuestions, 2000);
     }
@@ -130,15 +158,20 @@ function wrongAnswer (){
 //function if time runs out.
 function timesUp () {
     $('.button').off("click");
-    $('.question').text("Time's Up! Game Over!")
-    $('.answer-buttons').hide();
-    $('.clock').hide();
+    
     questionCounter++;
     blank++;
-    clearInterval(intervalId);
-    
-    endScreen();
 
+    clearInterval(intervalId);
+
+    if (questionCounter == questionsLength){
+           
+        setTimeout(endScreen, 4000);
+} else {
+    setTimeout(displayQuestions, 2000);
+}
+    
+    
     console.log(questionCounter);
 
 };
@@ -146,12 +179,23 @@ function timesUp () {
 
 //function for end screen - this will update player on game stats and option to reset game.
 function endScreen(){
+    $('.timer').empty();
+    $('.container').hide();
+    $('.answerButtons').hide();
+    $('.time-display').hide();
+    $('.info-container').hide();
+    $('.clock').hide();
+    $('.time-text').hide();
+    $('.time-display').hide();
+    $('.question').hide();
+    $('.timer').hide()
+    $('.results').show();
     $('.results-buttons').show();
     $('.button-results').text("Game Over!");
-    $('.win').text("Correct Answers:" + correct);
-    $('.wrong').text("Wrong Answers:" + wrong);
-    //$('.draw').text("Unanswered Questions" + blank);
-    $('.time-display').hide();
+    $('.win').text("Correct Answers:  " + correct);
+    $('.lose').text("Wrong Answers:  " + wrong);
+    $('.draw').text("Unanswered Questions  " + blank);
+   
 
     //reset and restart
     gameReset();
@@ -185,7 +229,7 @@ function displayQuestions(){
     $('.info-container').show();
 
     //question timer
-    var timer = 10;
+    var timer = 6;
     intervalId = setInterval(decrement, 1000);
     function decrement() {
         timer--;
@@ -211,14 +255,15 @@ function displayQuestions(){
                 
         if (        
             $(this).text() === gameQuestions[questionCounter].correctAnswer){
-            
-                       
+                                   
                 correctAnswer();
+
                 console.log(this);
                         
             } else {
                 
                 wrongAnswer();
+
                 console.log(this);
         }    
     

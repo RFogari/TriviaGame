@@ -9,7 +9,7 @@ body{
     background-color: currentColor;
     margin-top: 10px;
     margin-left: 25%;
-    margin-right: 25%;
+    margin-right: 0%;
     padding: 15px;
     
 }
@@ -36,7 +36,7 @@ body{
 
 .info-container{
     background-color: #292a2b;
-    margin-left: 20%;
+    margin-left: 18%;
     text-align: center;
     width: 800px;
     color: white;
@@ -57,14 +57,14 @@ body{
     background:#35373a;
     color: white;
     text-align: center;
-    width: 600px;
+    width: 500px;
     margin-left:25%;
     margin-right:25%;
+    
     margin-top:10px;
     height:50px;
-    font-display: bold;
-    
 }
+
 .time-text{
     padding-top:10px;
     padding-left: 10px;
@@ -74,11 +74,12 @@ body{
 .timer{
     padding-top:10px;
     float:relative;
+    font-display: bold;
 }
 
 .answer-buttons{
     padding-top:15px;
-    padding-bottom:50px;
+    padding-bottom:20px;
 }
 
 .btn{
@@ -86,11 +87,19 @@ body{
     padding-left: 5px; 
 }
 
-.results-container{
-    background:#35373a;
+.results{
+    background: #35373a;
     color: white;
+    margin-left:33%;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-top:25px;
+    width: 600px;
+    text-align: center;
+    font-size:18px;
+    position:relative;
 }
-.results-buttons{
-    background:#35373a;
-    color: white;
+
+.answerButtons{
+    padding: 5px;
 }
